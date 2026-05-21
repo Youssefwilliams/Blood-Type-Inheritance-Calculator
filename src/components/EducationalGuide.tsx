@@ -1,15 +1,17 @@
 import { useState, useMemo } from 'react';
 import { BookOpen, HelpCircle, Users, Save, CheckCircle2, AlertTriangle, ArrowDown, Network, Sparkles, Check } from 'lucide-react';
-import { TranslationDict, ParentState, PhenotypeABO, PhenotypeRh } from '../types';
+import { TranslationDict, ParentState, PhenotypeABO, PhenotypeRh, Language } from '../types';
 import { calculateGenetics } from '../utils/genetics';
+import GeneticsQuiz from './GeneticsQuiz';
 
 interface EducationalGuideProps {
   t: TranslationDict;
   father: ParentState;
   mother: ParentState;
+  language: Language;
 }
 
-export default function EducationalGuide({ t, father, mother }: EducationalGuideProps) {
+export default function EducationalGuide({ t, father, mother, language }: EducationalGuideProps) {
   const isAr = t.alleleSymbol === 'أليل';
 
   // 1. Initial local state for the 4 grandparents loaded from localStorage or standard fallbacks
@@ -202,6 +204,9 @@ export default function EducationalGuide({ t, father, mother }: EducationalGuide
           </table>
         </div>
       </div>
+
+      {/* Interactive Genetics Quiz */}
+      <GeneticsQuiz language={language} />
 
       {/* NEW: Multi-Generational Family History Section */}
       <div id="family-history-deck" className="border border-slate-800 rounded-2xl bg-slate-900/40 p-5 sm:p-6 mt-6 space-y-6 relative z-10">

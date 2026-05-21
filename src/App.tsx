@@ -246,7 +246,7 @@ export default function App() {
 
         {/* 5. Dark Bento Education Deck */}
         <section id="educational-reference-deck" className="space-y-6 sm:space-y-8">
-          <EducationalGuide t={t} father={father} mother={mother} />
+          <EducationalGuide t={t} father={father} mother={mother} language={language} />
           <HistoricalCulturalHub t={t} isRtl={isRtl} theme={theme} />
         </section>
       </main>
