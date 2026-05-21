@@ -1,0 +1,6 @@
+{
+  "name": "Blood Type Inheritance Calculator",
+  "description": "An interactive, bilingual (English/Arabic) calculator to predict potential children's blood types using genetic Punnett squares, complete with percentages, visual charts, and Rh immunization warnings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
